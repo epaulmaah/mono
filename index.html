@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8f7f4" />
+  <meta name="description" content="MONO is an independent coding school. Learn to code, build real things, and ship your ideas." />
+  <title>MONO — Learn to build.</title>
+
+  <!-- Tailwind CSS browser build for a quick, static prototype -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f8f7f4;
+      --ink: #191919;
+      --muted: #77756f;
+      --line: #dedcd5;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .mono { font-family: "DM Mono", monospace; }
+
+    ::selection {
+      background: #191919;
+      color: #fff;
+    }
+
+    .hero-title {
+      font-size: clamp(3.4rem, 9vw, 7.8rem);
+      letter-spacing: -0.085em;
+      line-height: 0.96;
+    }
+
+    .outline-link {
+      transition: background .2s, color .2s;
+    }
+
+    .outline-link:hover {
+      background: var(--ink);
+      color: white;
+    }
+
+    .project-row {
+      transition: padding .2s;
+    }
+
+    .project-row:hover {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <header class="mx-auto max-w-7xl px-6 md:px-10">
+    <nav class="flex h-20 items-center justify-between border-b border-[#dedcd5]"
+      aria-label="Main navigation">
+
+      <a href="#home" class="flex items-center gap-3" aria-label="MONO home">
+        <span class="flex h-9 w-9 items-center justify-center bg-[#191919] text-white">
+          <svg width="20" height="20" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="1.8"
+            aria-hidden="true">
+            <path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/>
+          </svg>
+        </span>
+        <span class="text-xl font-bold tracking-[-0.07em]">
+          mono<span class="text-[#aaa79f]">.</span>
+        </span>
+      </a>
+
+      <div class="hidden items-center gap-8 text-sm text-[#66645e] sm:flex">
+        <a href="#about" class="hover:text-black">About</a>
+        <a href="#curriculum" class="hover:text-black">Curriculum</a>
+        <a href="#projects" class="hover:text-black">Projects</a>
+      </div>
+
+      <a href="#contact"
+        class="inline-flex items-center gap-2 bg-[#191919] px-4 py-3 text-sm text-white transition hover:bg-[#3a3a3a]">
+        Get started <span aria-hidden="true">↗</span>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home"
+      class="mx-auto grid max-w-7xl gap-14 px-6 pb-24 pt-20 md:grid-cols-12 md:px-10 md:pb-32 md:pt-32">
+
+      <div class="md:col-span-8">
+        <p class="mono mb-8 flex items-center gap-3 text-[11px] uppercase tracking-[0.16em] text-[#77756f]">
+          <span class="h-2 w-2 rounded-full bg-[#4f7857]"></span>
+          Independent coding school · Est. 2026
+        </p>
+
+        <h1 class="hero-title max-w-5xl font-semibold">
+          The internet<br />
+          needs more<br />
+          people who <span class="text-[#a5a39c]">build.</span>
+        </h1>
+
+        <div class="mt-10 flex max-w-xl flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <p class="max-w-sm text-base leading-7 text-[#77756f]">
+            Learn to code. Make real things. Figure it out along the way.
+          </p>
+
+          <a href="#curriculum"
+            class="outline-link inline-flex w-fit shrink-0 items-center gap-4 border border-[#191919] px-5 py-4 text-sm">
+            Explore the curriculum <span aria-hidden="true">↘</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Code illustration -->
+      <div class="flex items-end md:col-span-4">
+        <div class="w-full bg-[#191919] p-5 text-[#e5e5e5] sm:p-7">
+          <div class="mb-8 flex items-center justify-between border-b border-white/10 pb-4">
+            <div class="flex gap-1.5" aria-hidden="true">
+              <span class="h-2 w-2 rounded-full bg-[#77756f]"></span>
+              <span class="h-2 w-2 rounded-full bg-[#77756f]"></span>
+              <span class="h-2 w-2 rounded-full bg-[#77756f]"></span>
+            </div>
+            <span class="mono text-[10px] text-[#999]">hello-world.html</span>
+          </div>
+
+          <div class="mono space-y-3 text-xs leading-6 sm:text-sm">
+            <p><span class="text-[#a78bfa]">&lt;h1&gt;</span></p>
+            <p class="pl-5 text-white">Hello, world.</p>
+            <p><span class="text-[#a78bfa]">&lt;/h1&gt;</span></p>
+            <p class="pt-4 text-[#7eaa84]">// your turn.</p>
+            <p class="text-[#a3a3a3]">const future = "yours";</p>
+            <p class="pt-5 text-[#7eaa84]">● ready to build</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro strip -->
+    <section id="about" class="border-y border-[#dedcd5]">
+      <div class="mx-auto grid max-w-7xl gap-6 px-6 py-8 sm:grid-cols-3 md:px-10">
+        <p class="mono text-[11px] uppercase tracking-[0.12em] text-[#77756f]">
+          01 / Learn
+        </p>
+        <p class="mono text-[11px] uppercase tracking-[0.12em] text-[#77756f]">
+          02 / Build
+        </p>
+        <p class="mono text-[11px] uppercase tracking-[0.12em] text-[#77756f]">
+          03 / Ship
+        </p>
+      </div>
+    </section>
+
+    <!-- Curriculum -->
+    <section id="curriculum"
+      class="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-32">
+
+      <div class="mb-14 grid gap-5 md:grid-cols-2 md:items-end">
+        <div>
+          <p class="mono mb-5 text-[11px] uppercase tracking-[0.16em] text-[#77756f]">
+            What you'll learn
+          </p>
+          <h2 class="text-4xl font-semibold tracking-[-0.07em] sm:text-6xl">
+            Start simple.<br />Build anything.
+          </h2>
+        </div>
+        <p class="max-w-sm leading-7 text-[#77756f] md:justify-self-end">
+          No endless lectures. Just the essential tools, practical work,
+          and the confidence to make something of your own.
+        </p>
+      </div>
+
+      <div class="border-t border-[#dedcd5]">
+        <article class="grid gap-4 border-b border-[#dedcd5] py-7 sm:grid-cols-[80px_1fr_auto] sm:items-center">
+          <span class="mono text-xs text-[#99968e]">01</span>
+          <div>
+            <h3 class="text-xl font-medium tracking-tight">The building blocks</h3>
+            <p class="mt-2 text-sm leading-6 text-[#77756f]">
+              HTML, CSS & the fundamentals of the web.
+            </p>
+          </div>
+          <span class="mono text-xs text-[#77756f]">FOUNDATIONS</span>
+        </article>
+
+        <article class="grid gap-4 border-b border-[#dedcd5] py-7 sm:grid-cols-[80px_1fr_auto] sm:items-center">
+          <span class="mono text-xs text-[#99968e]">02</span>
+          <div>
+            <h3 class="text-xl font-medium tracking-tight">Make it interactive</h3>
+            <p class="mt-2 text-sm leading-6 text-[#77756f]">
+              JavaScript, logic & the magic of making things work.
+            </p>
+          </div>
+          <span class="mono text-xs text-[#77756f]">JAVASCRIPT</span>
+        </article>
+
+        <article class="grid gap-4 border-b border-[#dedcd5] py-7 sm:grid-cols-[80px_1fr_auto] sm:items-center">
+          <span class="mono text-xs text-[#99968e]">03</span>
+          <div>
+            <h3 class="text-xl font-medium tracking-tight">Make it yours</h3>
+            <p class="mt-2 text-sm leading-6 text-[#77756f]">
+              Real projects, Git, GitHub & deployment.
+            </p>
+          </div>
+          <span class="mono text-xs text-[#77756f]">BUILD & SHIP</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="bg-[#eeede8]">
+      <div class="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-28">
+        <div class="mb-12 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          <div>
+            <p class="mono mb-5 text-[11px] uppercase tracking-[0.16em] text-[#77756f]">
+              Learning by doing
+            </p>
+            <h2 class="text-4xl font-semibold tracking-[-0.07em] sm:text-6xl">
+              Less theory.<br />More making.
+            </h2>
+          </div>
+          <p class="max-w-xs text-sm leading-6 text-[#77756f]">
+            Your portfolio should show what you can do, not just what you've studied.
+          </p>
+        </div>
+
+        <div class="border-t border-[#d5d3cc]">
+          <a href="#contact"
+            class="project-row flex items-center justify-between gap-4 border-b border-[#d5d3cc] py-6 transition">
+            <div class="flex items-center gap-5 sm:gap-8">
+              <span class="mono text-xs text-[#99968e]">01</span>
+              <span class="text-lg font-medium sm:text-2xl">Your first website</span>
+            </div>
+            <span class="mono text-xs text-[#77756f]">HTML / CSS ↗</span>
+          </a>
+
+          <a href="#contact"
+            class="project-row flex items-center justify-between gap-4 border-b border-[#d5d3cc] py-6 transition">
+            <div class="flex items-center gap-5 sm:gap-8">
+              <span class="mono text-xs text-[#99968e]">02</span>
+              <span class="text-lg font-medium sm:text-2xl">A little web app</span>
+            </div>
+            <span class="mono text-xs text-[#77756f]">JAVASCRIPT ↗</span>
+          </a>
+
+          <a href="#contact"
+            class="project-row flex items-center justify-between gap-4 border-b border-[#d5d3cc] py-6 transition">
+            <div class="flex items-center gap-5 sm:gap-8">
+              <span class="mono text-xs text-[#99968e]">03</span>
+              <span class="text-lg font-medium sm:text-2xl">Something of your own</span>
+            </div>
+            <span class="mono text-xs text-[#77756f]">YOUR IDEAS ↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact"
+      class="mx-auto max-w-7xl px-6 py-28 md:px-10 md:py-40">
+      <p class="mono mb-7 text-[11px] uppercase tracking-[0.16em] text-[#77756f]">
+        Your move
+      </p>
+
+      <h2 class="max-w-4xl text-5xl font-semibold tracking-[-0.08em] sm:text-7xl md:text-8xl">
+        You don't have to know everything to start.
+      </h2>
+
+      <div class="mt-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+        <p class="max-w-sm leading-7 text-[#77756f]">
+          Just bring your curiosity. We'll figure out the rest.
+        </p>
+
+        <!-- Replace the email with your real contact address -->
+        <a href="mailto:hello@example.com?subject=Learning%20to%20code"
+          class="inline-flex w-fit items-center gap-8 bg-[#191919] px-6 py-5 text-sm text-white transition hover:bg-[#3a3a3a]">
+          Let's talk <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-[#dedcd5]">
+    <div class="mx-auto flex max-w-7xl flex-col gap-5 px-6 py-8 sm:flex-row sm:items-center sm:justify-between md:px-10">
+      <a href="#home" class="text-lg font-bold tracking-[-0.07em]">
+        mono<span class="text-[#aaa79f]">.</span>
+      </a>
+      <p class="mono text-[10px] uppercase tracking-[0.12em] text-[#77756f]">
+        A small school for people with big curiosity.
+      </p>
+      <a href="#home" class="text-sm text-[#77756f] hover:text-black">
+        Back to top ↑
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
